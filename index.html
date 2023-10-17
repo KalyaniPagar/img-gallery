@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title> Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="img/c1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallary">
+        <img src="img/c1.jpg" onclick="openFullImg(this.src)">
+        <img src="img/c2.jpg" onclick="openFullImg(this.src)">
+        <img src="img/c3.jpg" onclick="openFullImg(this.src)">
+        <img src="img/c4.jpg" onclick="openFullImg(this.src)">
+    </div>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
